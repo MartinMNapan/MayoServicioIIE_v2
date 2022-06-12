@@ -1,7 +1,18 @@
 package com.idat.MayoServcioPrueba.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name = "producto")
+@Entity
 public class Productos {
 	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idProducto;
 	private String nombreProducto;
 	private String decripcion;
